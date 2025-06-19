@@ -183,5 +183,51 @@ public class EvenOddSwitch {
         sc.close();
     }
 }
+//M/FSwitch
+import java.util.Scanner;
+public class GenderSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int attempts = 5;
+        for (int i = 0; i < attempts; i++) {
+            System.out.print("Enter gender (M/F): ");
+            char gender = scanner.next().toUpperCase().charAt(0);
+            switch (gender) {
+                case 'M':
+                    System.out.println("Gender: Male");
+                    break;
+                case 'F':
+                    System.out.println("Gender: Female");
+                    break;
+                default:
+                    System.out.println("Invalid input. Please enter M or F.");
+                    break;
+            }
+            System.out.println(); 
+        }
+        scanner.close();
+    }
+}
+//largest between three numbers
+public class LargestNumber{
+    public static void main(String[] args) {
+        int a = 10, b = 20, c = 30;
+        int largest = a;
+        for (int i = 1; i <= 2; i++) {
+            if (i == 1) {
+                if (b > largest) {
+                    largest = b;
+                }
+            } else {
+                if (c > largest) {
+                    largest = c;
+                }
+            }
+        }
+        System.out.println("The largest number is: " + largest);
+    }
+}
+
+
 
 
