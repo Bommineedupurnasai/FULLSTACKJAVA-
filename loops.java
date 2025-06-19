@@ -158,4 +158,30 @@ public class Palindrome {
         sc.close(); 
     }
 }
+//even odd switch
+import java.util.Scanner;
+public class EvenOddSwitch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char choice;
+        do {
+            System.out.print("Enter a number: ");
+            int num = sc.nextInt();
+            switch (num % 2) {
+                case 0:
+                    System.out.println(num + " is Even.");
+                    break;
+                case 1:
+                    System.out.println(num + " is Odd.");
+                    break;
+                default:
+                    System.out.println("Invalid input.");
+            }
+            System.out.print("Do you want to check another number: ");
+            choice = sc.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
+        sc.close();
+    }
+}
+
 
